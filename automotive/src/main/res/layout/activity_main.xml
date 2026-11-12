@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_warm_ivory"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_l">
+
+        <!-- ================= TOP HEADER BAR ================= -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_two_seats" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_m"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/title"
+                    android:textColor="@color/text_charcoal_primary"
+                    android:textSize="@dimen/text_size_header" />
+
+                <TextView
+                    android:id="@+id/tagline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/tagline"
+                    android:textColor="@color/text_charcoal_secondary"
+                    android:textSize="@dimen/text_size_body_secondary" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/stateChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_bordered"
+                android:fontFamily="sans-serif-medium"
+                android:paddingHorizontal="@dimen/spacing_m"
+                android:paddingVertical="@dimen/spacing_xs"
+                android:text="주차 완료"
+                android:textColor="@color/brand_forest_green"
+                android:textSize="@dimen/text_size_caption" />
+        </LinearLayout>
+
+        <!-- ================= 1. HOME VIEW (STANDBY STATE) ================= -->
+        <LinearLayout
+            android:id="@+id/homeView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_l"
+            android:background="@drawable/bg_card_warm"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_l">
+
+            <!-- Left Brand Emblem -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_two_seats" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_s"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="출발하면 옆자리가 조용히 함께해요"
+                    android:textColor="@color/text_charcoal_primary"
+                    android:textSize="@dimen/text_size_title" />
+            </LinearLayout>
+
+            <!-- Right Family Share Control -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_l"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/home_share_title"
+                        android:textColor="@color/text_charcoal_primary"
+                        android:textSize="@dimen/text_size_body" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/shareSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xs"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/home_share_privacy_note"
+                    android:textColor="@color/text_charcoal_secondary"
+                    android:textSize="@dimen/text_size_body_secondary" />
+
+                <TextView
+                    android:id="@+id/lastSent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_m"
+                    android:fontFamily="sans-serif"
+                    android:text="최근 전송된 안부: 오늘도 평소처럼 편안하게 도착하셨어요 🌿"
+                    android:textColor="@color/brand_forest_green"
+                    android:textSize="@dimen/text_size_caption" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ================= 2. DRIVING VIEW (MINIMALIST) ================= -->
+        <LinearLayout
+            android:id="@+id/drivingView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="@dimen/spacing_l"
+            android:background="@drawable/bg_card_bordered"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:id="@+id/drivingDot"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/bg_breathing_dot" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_m"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/driving_status"
+                android:textColor="@color/text_charcoal_primary"
+                android:textSize="@dimen/text_size_body" />
+        </LinearLayout>
+
+        <!-- ================= 3. STOPPED CARD (SIGNAL WAIT) ================= -->
+        <LinearLayout
+            android:id="@+id/stopCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_m"
+            android:background="@drawable/bg_card_warm"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_m"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="@string/stopped_info"
+                android:textColor="@color/text_charcoal_primary"
+                android:textSize="@dimen/text_size_body" />
+        </LinearLayout>
+
+        <!-- ================= 4. POST-DRIVING REPORT & FAMILY PREVIEW ================= -->
+        <LinearLayout
+            android:id="@+id/reportView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_l"
+            android:orientation="horizontal">
+
+            <!-- Left Driver Column -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card_warm"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_l">
+
+                <TextView
+                    android:id="@+id/driverMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/driver_message"
+                    android:textColor="@color/text_charcoal_primary"
+                    android:textSize="@dimen/text_size_title" />
+
+                <!-- Light Stats Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_m"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/statDuration"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif"
+                        android:text="주행: 42분"
+                        android:textColor="@color/text_charcoal_secondary"
+                        android:textSize="@dimen/text_size_caption" />
+
+                    <TextView
+                        android:id="@+id/statStops"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif"
+                        android:text="정차: 3회"
+                        android:textColor="@color/text_charcoal_secondary"
+                        android:textSize="@dimen/text_size_caption" />
+
+                    <TextView
+                        android:id="@+id/statHarsh"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif"
+                        android:text="급제동: 0회"
+                        android:textColor="@color/text_charcoal_secondary"
+                        android:textSize="@dimen/text_size_caption" />
+
+                    <TextView
+                        android:id="@+id/statFatigue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif"
+                        android:text="상태: 양호"
+                        android:textColor="@color/text_charcoal_secondary"
+                        android:textSize="@dimen/text_size_caption" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_m"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/stretching_tip"
+                    android:textColor="@color/brand_forest_green"
+                    android:textSize="@dimen/text_size_body_secondary" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/doneButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_height_large"
+                    android:layout_marginTop="@dimen/spacing_l"
+                    android:backgroundTint="@color/brand_forest_green"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/done_button"
+                    android:textColor="@color/text_on_brand"
+                    android:textSize="@dimen/text_size_body"
+                    app:cornerRadius="@dimen/button_corner_radius" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="@dimen/spacing_l"
+                android:layout_height="wrap_content" />
+
+            <!-- Right Family Column -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card_bordered"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_l">
+
+                <!-- Speech Bubble -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_speech_bubble"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_m">
+
+                    <TextView
+                        android:id="@+id/familyMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/family_message"
+                        android:textColor="@color/text_charcoal_primary"
+                        android:textSize="@dimen/text_size_body" />
+
+                    <TextView
+                        android:id="@+id/familyMeta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_xs"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/family_meta"
+                        android:textColor="@color/text_charcoal_secondary"
+                        android:textSize="@dimen/text_size_caption" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/sharedFields"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_m"
+                    android:drawableStart="@drawable/ic_check_circle"
+                    android:drawablePadding="@dimen/spacing_xs"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/shared_fields_label"
+                    android:textColor="@color/brand_forest_green"
+                    android:textSize="@dimen/text_size_caption" />
+
+                <TextView
+                    android:id="@+id/neverShared"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xs"
+                    android:drawableStart="@drawable/ic_lock"
+                    android:drawablePadding="@dimen/spacing_xs"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/never_shared_label"
+                    android:textColor="@color/text_charcoal_secondary"
+                    android:textSize="@dimen/text_size_caption" />
+
+                <TextView
+                    android:id="@+id/sendStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_m"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/send_status"
+                    android:textColor="@color/brand_forest_green"
+                    android:textSize="@dimen/text_size_caption" />
+
+                <ProgressBar
+                    android:id="@+id/sendProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="@dimen/spacing_xs"
+                    android:max="100"
+                    android:progress="100"
+                    android:progressDrawable="@drawable/bg_progress_bar" />
+
+                <LinearLayout
+                    android:id="@+id/sendButtons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_m"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sendNowButton"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/btn_height_medium"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/brand_forest_green"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/send_now"
+                        android:textColor="@color/text_on_brand"
+                        android:textSize="@dimen/text_size_caption"
+                        app:cornerRadius="@dimen/button_corner_radius" />
+
+                    <Space
+                        android:layout_width="@dimen/spacing_s"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/skipButton"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/btn_height_medium"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/skip_send"
+                        android:textColor="@color/text_charcoal_secondary"
+                        android:textSize="@dimen/text_size_caption"
+                        app:cornerRadius="@dimen/button_corner_radius"
+                        app:strokeColor="@color/card_border_warm" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ================= 5. FAMILY PHONE NOTIFICATION BANNER PREVIEW ================= -->
+        <LinearLayout
+            android:id="@+id/familyBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_l"
+            android:background="@drawable/bg_speech_bubble"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_m">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_two_seats" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_s"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/family_banner_title"
+                    android:textColor="@color/brand_forest_green"
+                    android:textSize="@dimen/text_size_caption" />
+
+                <TextView
+                    android:id="@+id/familyBannerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/family_banner_text"
+                    android:textColor="@color/text_charcoal_primary"
+                    android:textSize="@dimen/text_size_body_secondary" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

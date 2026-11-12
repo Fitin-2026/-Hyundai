@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">옆자리</string>
+    <string name="title">옆자리</string>
+    <string name="tagline">출발하면 옆자리가 조용히 함께해요</string>
+
+    <string name="home_share_title">가족 안부 공유</string>
+    <string name="home_share_privacy_note">위치 · 경로 · 목적지는 보내지 않아요</string>
+    <string name="last_sent_prefix">최근 전송된 안부: </string>
+
+    <string name="driving_status">안전하게 주행 중입니다</string>
+    <string name="stopped_info">다음 휴게소까지 12km (약 10분 거리)</string>
+
+    <string name="driver_message">오늘도 평소처럼 편안하게 도착하셨어요 🌿</string>
+    <string name="stretching_tip">🧘 주차 완료 후 차량 안에서 1분간 어깨와 목을 천천히 풀어주세요.</string>
+
+    <string name="stat_duration_label">총 운전 시간</string>
+    <string name="stat_stops_label">신호 대기 정차</string>
+    <string name="stat_harsh_label">급제동 감지</string>
+    <string name="stat_fatigue_label">컨디션 수준</string>
+
+    <string name="family_message">"부모님께서 오늘 주행을 안전하게 마치고 편안히 쉬고 계십니다."</string>
+    <string name="family_meta">주차 완료 후 전달됨 · 사생활 보호 적용</string>
+
+    <string name="shared_fields_label">✓ 전달되는 정보: 운전 횟수, 주행 시간, 컨디션 요약</string>
+    <string name="never_shared_label">🔒 일절 전달되지 않는 정보: 위치, 경로, 실시간 장소</string>
+
+    <string name="send_status">주차 완료 후 요약 카드 전달 완료</string>
+    <string name="send_now">지금 바로 전송하기</string>
+    <string name="skip_send">전송 취소</string>
+    <string name="done_button">확인 완료</string>
+
+    <string name="family_banner_title">옆자리 안부 알림</string>
+    <string name="family_banner_text">아버지께서 주행을 안전하게 마치셨습니다.</string>
+</resources>

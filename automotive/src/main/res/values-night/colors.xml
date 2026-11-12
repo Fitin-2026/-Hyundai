@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Night Theme Color Tokens -->
+    <color name="bg_warm_ivory">#1E2420</color>
+    <color name="card_bg_warm">#272F29</color>
+    <color name="card_border_warm">#364239</color>
+
+    <color name="brand_forest_green">#4E8576</color>
+    <color name="brand_sun_apricot">#F2A65A</color>
+
+    <color name="text_charcoal_primary">#EBF0EC</color>
+    <color name="text_charcoal_secondary">#A3B0A7</color>
+    <color name="text_on_brand">#FFFFFF</color>
+
+    <color name="status_amber">#F59E0B</color>
+    <color name="status_green">#4E8576</color>
+
+    <color name="divider_warm">#333F36</color>
+    <color name="speech_bubble_bg">#2F3A33</color>
+    <color name="banner_bg">#29332C</color>
+    <color name="banner_border">#3A473E</color>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.MyApplication_옆자리" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Primary Brand Colors (Night Mode) -->
+        <item name="colorPrimary">@color/brand_forest_green</item>
+        <item name="colorAccent">@color/brand_sun_apricot</item>
+        <item name="android:windowBackground">@color/bg_warm_ivory</item>
+        <item name="android:textColorPrimary">@color/text_charcoal_primary</item>
+        <item name="android:textColorSecondary">@color/text_charcoal_secondary</item>
+    </style>
+</resources>

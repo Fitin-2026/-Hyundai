@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light Theme Color Tokens -->
+    <color name="bg_warm_ivory">#F7F3EC</color>
+    <color name="card_bg_warm">#FAF7F2</color>
+    <color name="card_border_warm">#E3DDD3</color>
+
+    <color name="brand_forest_green">#2F5D50</color>
+    <color name="brand_sun_apricot">#F2A65A</color>
+
+    <color name="text_charcoal_primary">#2B2723</color>
+    <color name="text_charcoal_secondary">#6E6A65</color>
+    <color name="text_on_brand">#FFFFFF</color>
+
+    <color name="status_amber">#D97706</color>
+    <color name="status_green">#2F5D50</color>
+
+    <color name="divider_warm">#E8E2D8</color>
+    <color name="speech_bubble_bg">#EFE8DC</color>
+    <color name="banner_bg">#FAF3E6</color>
+    <color name="banner_border">#EADBCE</color>
+</resources>

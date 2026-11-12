@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Touch Target Minimum for Car In-Vehicle Screen -->
+    <dimen name="min_touch_target_size">76dp</dimen>
+    <dimen name="btn_height_large">76dp</dimen>
+    <dimen name="btn_height_medium">60dp</dimen>
+
+    <!-- Corner Radius Tokens -->
+    <dimen name="card_corner_radius">24dp</dimen>
+    <dimen name="button_corner_radius">16dp</dimen>
+    <dimen name="chip_corner_radius">12dp</dimen>
+    <dimen name="bubble_corner_radius">18dp</dimen>
+
+    <!-- Spacing Scale Tokens -->
+    <dimen name="spacing_xxs">4dp</dimen>
+    <dimen name="spacing_xs">8dp</dimen>
+    <dimen name="spacing_s">12dp</dimen>
+    <dimen name="spacing_m">16dp</dimen>
+    <dimen name="spacing_l">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+    <dimen name="spacing_xxl">48dp</dimen>
+
+    <!-- Typography Scale Tokens (AAOS Automotive Readability Standards) -->
+    <dimen name="text_size_header">32sp</dimen>
+    <dimen name="text_size_title">26sp</dimen>
+    <dimen name="text_size_body">22sp</dimen>
+    <dimen name="text_size_body_secondary">18sp</dimen>
+    <dimen name="text_size_caption">16sp</dimen>
+    <dimen name="text_size_number_highlight">42sp</dimen>
+
+    <!-- Stroke Thickness -->
+    <dimen name="card_stroke_width">1.5dp</dimen>
+</resources>
