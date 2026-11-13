@@ -19,7 +19,7 @@
 - 화면 규격: 2560 x 1440 px, 12.8인치, 160 dpi
 
 ## APK 위치
-- \apk/핏인_옆자리_release.apk``
+- `apk/핏인_옆자리_release.apk`
 
 ## 구조
 - `automotive` 차량용 앱
