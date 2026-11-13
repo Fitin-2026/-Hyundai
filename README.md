@@ -9,13 +9,14 @@
 4. APK로 바로 설치하려면 `apk/` 폴더의 APK를 사용하세요.
 
 ## 테스트 환경 및 필요한 설정
-- Android Studio: [버전]
+- Android Studio: Android Studio Rabbit 2 | 2026.2.2 (Build #AI-262.10968.63.2622.16730706)
+  - 개발 OS: Windows 11
 - JDK 11 이상, minSdk 29, compileSdk/targetSdk 37
 - 외부 서버·API 키가 필요 없습니다. 안부 공유는 앱 내 메모리 방식으로 동작하는 데모입니다.
 
 ## 개발 환경 (Pleos Connect 에뮬레이터)
-- 에뮬레이터 버전: Pleos Connect v2.1.0
-- 화면 규격: [가로 x 세로 해상도, 예: 1920x1080]
+- 에뮬레이터 버전: Pleos Connect v2.1.0 (Android 14.0, API 34, Google APIs, x86_64)
+- 화면 규격: 2560 x 1440 px, 12.8인치, 160 dpi
 
 ## APK 위치
 - `apk/옆자리_release.apk`
